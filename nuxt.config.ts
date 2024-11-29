@@ -34,10 +34,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: [
-        '/',
-        '/docs'
-      ],
+      routes: ['/', '/docs'],
       crawlLinks: true
     }
   },
@@ -47,11 +44,13 @@ export default defineNuxtConfig({
   },
 
   hooks: {
-    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
+    // Extend `@nuxt/ui` components as global to use them in `.md` files
     'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton'].includes(c.pascalName))
-
-      globals.forEach(c => c.global = true)
+      components
+        .filter(component => ['UButton'].includes(component.pascalName))
+        .forEach((component) => {
+          component.global = true
+        })
     }
   },
 
