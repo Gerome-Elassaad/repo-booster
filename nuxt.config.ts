@@ -32,10 +32,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-07-11',
 
   nitro: {
-    preset: 'node-server',
+    preset: 'netlify', // Use 'netlify' for Netlify deployments
     prerender: {
       routes: ['/', '/docs'],
       crawlLinks: true
+    },
+    output: {
+      dir: '.output', // Ensure the build output directory is specified
     }
   },
 
@@ -47,7 +50,7 @@ export default defineNuxtConfig({
     // Extend `@nuxt/ui` components as global to use them in `.md` files
     'components:extend': (components) => {
       components
-        .filter(component => ['UButton'].includes(component.pascalName))
+        .filter((component) => ['UButton'].includes(component.pascalName))
         .forEach((component) => {
           component.global = true
         })
