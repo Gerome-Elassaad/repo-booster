@@ -1,0 +1,21 @@
+[build]
+  command = "pnpm run build"
+  publish = ".output/public"
+
+[context.production.environment]
+  NITRO_PRESET = "netlify"
+  NUXT_PUBLIC_SITE_URL = "https://repo-booster.netlify.app"
+  NUXT_UI_PRO_LICENSE = "563BBD5C-D2E1-4D4C-B2A2-9C892F7F516E"
+
+[[redirects]]
+  from = "/docs/getting-started"
+  to = "https://docs.repo-booster.com"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'"
+
+[functions]
+  node_bundler = "esbuild"

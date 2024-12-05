@@ -1,4 +1,4 @@
-import { field, group } from '@nuxthq/studio/theme'
+import { group, field } from '@nuxthq/studio/theme'
 
 export default defineNuxtSchema({
   appConfig: {
@@ -76,3 +76,7 @@ export default defineNuxtSchema({
     })
   }
 })
+
+function defineNuxtSchema(arg0: { appConfig: { ui: any } }) {
+  throw new Error('Function not implemented.')
+}
