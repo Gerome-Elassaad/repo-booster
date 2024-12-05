@@ -16,17 +16,8 @@ const links = [
     label: 'Blog',
     to: '/blog',
     icon: 'i-heroicons-newspaper-20-solid',
-    children: [
-      { label: 'Exploring the Culinary Wonders of Asia', to: '/blog/asian-cuisine', icon: 'i-heroicons-globe-20-solid' },
-      { label: 'Discovering the Majestic Peaks', to: '/blog/pyrenees', icon: 'i-heroicons-mountain-20-solid' },
-      { label: 'Unveiling the Marvel', to: '/blog/james-webb', icon: 'i-heroicons-sparkles-20-solid' },
-      { label: 'The Benefits of Meditation', to: '/blog/meditation', icon: 'i-heroicons-heart-20-solid' },
-      { label: 'The 10 Most Dangerous Creatures on Earth', to: '/blog/animals', icon: 'i-heroicons-shield-exclamation-20-solid' },
-      { label: 'The Rise of Cryptocurrencies', to: '/blog/cryptocurrencies', icon: 'i-heroicons-currency-dollar-20-solid' },
-      { label: 'I tested Nuxt UI', to: '/blog/nuxt-ui', icon: 'i-heroicons-adjustments-horizontal-20-solid' }
     ]
-  }
-]
+  
 </script>
 
 <template>
