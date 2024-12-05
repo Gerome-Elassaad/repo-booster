@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
 
@@ -33,6 +32,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-07-11',
 
   nitro: {
+    preset: 'node-server',
     prerender: {
       routes: ['/', '/docs'],
       crawlLinks: true
