@@ -1,0 +1,16 @@
+[build]
+  command = "pnpm run build"
+  publish = ".output/public"
+
+[[redirects]]
+  from = "/api/search.json"
+  to = "/docs/getting-started"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'"
+
+[functions]
+  node_bundler = "esbuild"
