@@ -15,9 +15,9 @@ const links = [
   {
     label: 'Blog',
     to: '/blog',
-    icon: 'i-heroicons-newspaper-20-solid',
-    ]
-  
+    icon: 'i-heroicons-newspaper-20-solid'
+  }
+]
 </script>
 
 <template>
