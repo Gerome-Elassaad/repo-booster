@@ -20,11 +20,6 @@ export default defineNuxtConfig({
     disableTransition: true
   },
 
-  routeRules: {
-    '/api/search.json': { prerender: true },
-    '/docs': { redirect: '/docs/getting-started', prerender: false }
-  },
-
   future: {
     compatibilityVersion: 4
   },
